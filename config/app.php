@@ -228,7 +228,9 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 	//  I added this code below for a doctrine facade
-	'EntityManager' => LaravelDoctrine\ORM\Facades\EntityManager::class
+	'EntityManager' => LaravelDoctrine\ORM\Facades\EntityManager::class,
+        'Registry'      => LaravelDoctrine\ORM\Facades\Registry::class,
+        'Doctrine'      => LaravelDoctrine\ORM\Facades\Doctrine::class
     ],
 
 ];

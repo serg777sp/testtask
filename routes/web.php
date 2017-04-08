@@ -11,6 +11,8 @@
 |
 */
 
+Route::get('get-info/{name}','ApiController@getInfo');
+
 Route::get('/', function () {
     return view('welcome');
 });

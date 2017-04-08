@@ -48,5 +48,17 @@ class User {
      * @ORM\Column(type="string")
      */
     private $created_at;
+
+    public function getName() {
+        return $this->name;
+    }
+
+    public function getInfo() {
+        return $this->info;
+    }
+
+    public function setInfo($info) {
+        $this->info = $info;
+    }
 }
 
