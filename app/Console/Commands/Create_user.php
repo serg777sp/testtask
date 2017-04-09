@@ -55,7 +55,7 @@ class Create_user extends Command
 	    $user = new User($name, $password, $info);
 	    EntityManager::persist($user);
 	    EntityManager::flush();
-            return true;
+            return 200;
 	} else {
 	    echo 'Command is wrong!' ."\n" . $this->example . "\n";
 	}

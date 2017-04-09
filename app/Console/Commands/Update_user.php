@@ -60,6 +60,6 @@ class Update_user extends Command
         }
         $user->setInfo($info);
         EntityManager::flush($user);
-        return true;
+        return 200;
     }
 }
