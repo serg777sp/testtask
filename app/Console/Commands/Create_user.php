@@ -51,6 +51,7 @@ class Create_user extends Command
 	$name = (!empty($this->argument('name'))) ? $this->argument('name') : NULL;
 	$password = (!empty($this->option('password'))) ? $this->option('password') : NULL;
 	$info = (!empty($this->option('info'))) ? $this->option('info') : NULL;
+        
 	if($name && $password && $info){
 	    $user = new User($name, $password, $info);
 	    EntityManager::persist($user);

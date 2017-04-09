@@ -14,7 +14,7 @@ class CommandsAndApiTest extends TestCase
 
     private $test_user;
 
-    public function setUp() {
+    protected function setUp() {
         parent::setUp();
         $this->test_user = [
             'name' => 'test_user',
@@ -72,7 +72,7 @@ class CommandsAndApiTest extends TestCase
         $this->deleteTestUser();
     }
 
-    public function deleteTestUser() {
+    private function deleteTestUser() {
         $user = EntityManager::getRepository(User::class)->findOneBy(['name' => $this->test_user['name']]);
         EntityManager::remove($user);
         EntityManager::flush();
